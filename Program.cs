@@ -13,14 +13,17 @@ void all (string [] array, string [] newarray)
 }
 
 //Метод печати массива
-void PrintArray ()
+void PrintArray (string [] array)
     {
         Console.Write("[ ");
-        for (int i = 0; i < Array.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            Console.Write($"{Array[i]} ");
+            Console.Write($"{array[i]} ");
         }
         Console.Write("]");
         Console.WriteLine();
     }
-    PrintArray();
+    
+PrintArray(Array);
+all(Array, NewArray);
+PrintArray(NewArray);
