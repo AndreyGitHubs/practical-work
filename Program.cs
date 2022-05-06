@@ -1,8 +1,30 @@
-﻿
-//string Array = Console.ReadLine(); //получение строки с клавиатуры
+﻿/*
+
+//заполняем массив с клавиатуры
+Console.WriteLine("Введиие размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+string[] Array = new string[size];
+
+string[] InputArrayKeybord()
+{
+    int j = 0;
+    for (j = 0; j < size; j++)
+    {
+        Console.WriteLine("Введиие элемент массива");
+        Array[j] = Console.ReadLine();
+    }
+    while (j < size);
+    return Array;
+}
+
+*/
 
 // задаю заданный условием массив с имеющимеся значениями
-string[] Array = new string[] {"hello", "2", "world", ":-)"};
+string[] Array = new string[] {"hello", "2", "world", ":-)"}; // ок, работает на выходе [ 2 :-)   ].
+
+//проводим тестирование на других данных
+//string[] Array = new string[] {"1234", "1567", "-2", "computer science"}; // ок, работает на выходе [ -2    ].
+//string[] Array = new string[] {"Russia", "Denmark", "Kazan"}; // ок, работает на выходе [    ].
 
 // создаю новый массив в который будут складываться нужные значения. Длинна нового массив равна длинне заданного массива Array
 string[] NewArray = new string [Array.Length];
@@ -33,7 +55,10 @@ void PrintArray (string [] array)
         Console.Write("]");
         Console.WriteLine();
     }
-    
+
+//InputArrayKeybord(); // заполнение массива с клавиатуры
+Console.WriteLine("Заданый массив");
 PrintArray(Array);
 MetodNewArray(Array, NewArray);
+Console.WriteLine("Обработанный массив");
 PrintArray(NewArray);
