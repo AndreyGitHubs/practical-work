@@ -5,15 +5,15 @@ Console.WriteLine("Введиие размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 string[] Array = new string[size];
 
-string[] InputArrayKeybord()
+string[] InputArrayKeyboard()
 {
-    int j = 0;
+    int index = 0; //индекс массива первоначально присваиваем 0
     for (j = 0; j < size; j++)
     {
         Console.WriteLine("Введиие элемент массива");
-        Array[j] = Console.ReadLine();
+        Array[index] = Console.ReadLine();
     }
-    while (j < size);
+    while (index < size);
     return Array;
 }
 
@@ -56,7 +56,7 @@ void PrintArray (string [] array)
         Console.WriteLine();
     }
 
-//InputArrayKeybord(); // заполнение массива с клавиатуры
+//InputArrayKeyboard(); // заполнение массива с клавиатуры
 Console.WriteLine("Заданый массив");
 PrintArray(Array);
 MetodNewArray(Array, NewArray);
